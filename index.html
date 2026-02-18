@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud File Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>☁️ Cloud File Manager </h1>
+
+        <section class="upload-section">
+            <h2>Upload a New File</h2>
+            <form id="uploadForm">
+                <input type="file" id="fileInput" name="file" required>
+                <button type="submit" class="btn-primary">Upload</button>
+            </form>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </section>
+
+        <section class="file-list-section">
+            <h2>Your Files</h2>
+            <div class="table-container">
+                <table class="file-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Size</th>
+                            <th>Last Modified</th>
+                            <th style="text-align: right;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fileTableBody">
+                        </tbody>
+                </table>
+                 <p id="no-files-message" style="display: none;">No files uploaded yet.</p>
+            </div>
+        </section>
+    </div>
+    
+    <div id="toastContainer" class="toast-container"></div>
+    
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal">
+            <h3 id="modalTitle">Modal Title</h3>
+            <div id="modalContent" class="modal-content">
+                </div>
+            <div id="modalActions" class="modal-actions">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
